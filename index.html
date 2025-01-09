@@ -151,20 +151,33 @@
       document.getElementById(tabId).classList.add('active');
     }
 
-    // Split the text in the about section into individual words and wrap them in span elements
-    const aboutText = document.getElementById('about-text');
-    const text = aboutText.innerHTML;
+    // Function to split and wrap text, preserving HTML tags like <a> and <br>
+    function wrapTextWithSpan(text) {
+      const tempDiv = document.createElement('div');
+      tempDiv.innerHTML = text;
 
-    const wordsArray = text.split(' ').map(word => `<span class="scatter-text">${word}</span>`).join(' ');
-    aboutText.innerHTML = wordsArray;
+      // Wrap all text nodes in <span> elements, preserving tags like <a> and <br>
+      const walk = document.createTreeWalker(tempDiv, NodeFilter.SHOW_TEXT, null, false);
+      while (walk.nextNode()) {
+        const textNode = walk.currentNode;
+        const span = document.createElement('span');
+        span.classList.add('scatter-text');
+        span.textContent = textNode.textContent;
+        textNode.replaceWith(span);
+      }
+      return tempDiv.innerHTML;
+    }
+
+    const aboutText = document.getElementById('about-text');
+    aboutText.innerHTML = wrapTextWithSpan(aboutText.innerHTML);
 
     const words = document.querySelectorAll('.scatter-text');
 
     aboutText.addEventListener('mouseenter', () => {
       words.forEach(word => {
         // Set a small scatter range (e.g., between -10px and 10px)
-        const randomX = Math.random() * 20 - 10; // Random X offset between -10px and 10px
-        const randomY = Math.random() * 20 - 10; // Random Y offset between -10px and 10px
+        const randomX = Math.random() * 20 - 40; // Random X offset between -10px and 10px
+        const randomY = Math.random() * 20 - 40; // Random Y offset between -10px and 10px
         word.style.transform = `translate(${randomX}px, ${randomY}px)`; // Apply random movement nearby
       });
     });
@@ -177,7 +190,6 @@
   </script>
 </body>
 </html>
-
 
 
 
