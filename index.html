@@ -27,6 +27,21 @@
     .content.active {
       display: block;
     }
+    .about-container {
+      display: flex;
+      align-items: center; /* Vertically center the content */
+      justify-content: center; /* Center horizontally */
+      gap: 20px; /* Space between text and image */
+    }
+    .about-container img {
+      width: 300px;
+      height: 450px;
+      object-fit: cover;
+    }
+    .about-container p {
+      max-width: 500px; /* Optional: limit text width */
+      text-align: left; /* Align text to the left */
+    }
     .photo-gallery img {
       width: 450px;
       height: 300px;
@@ -46,13 +61,13 @@
   <div id="about" class="content active">
     <h2>About Me</h2>
     <div class="about-container">
-      <img src="About_Me.JPG" alt="Your Photo" width="300" height="450">
       <p>
         Hello! I'm a graduate student in the Biophysics PhD Program at Stanford University. 
         I work in Benjamin Good's lab in the Applied Physics Department, where my research 
         combines tools from statistical physics and evolutionary biology. 
         You can find a list of my publications here.
       </p>
+      <img src="About_Me.JPG" alt="Your Photo">
     </div>
   </div>
 
@@ -97,3 +112,4 @@
   </script>
 </body>
 </html>
+
