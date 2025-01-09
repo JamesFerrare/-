@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -50,6 +50,19 @@
       height: 300px;
       margin: 10px;
       object-fit: cover;
+      position: relative; /* To allow positioning of the tooltip */
+    }
+    .photo-gallery img:hover::after {
+      content: attr(title); /* Display the title attribute */
+      position: absolute;
+      bottom: 10px; /* Adjust the position as needed */
+      left: 10px; /* Adjust the position as needed */
+      background-color: rgba(0, 0, 0, 0.7);
+      color: white;
+      padding: 5px;
+      font-size: 14px;
+      border-radius: 5px;
+      z-index: 10;
     }
     h2 {
       font-size: 28px;
@@ -94,25 +107,24 @@
     <p>You can view my CV here.</p>
   </div>
 
-
-<div id="photography" class="content">
-  <h2>Scenes from the Bay Area and Beyond</h2>
-  <div class="photo-gallery">
-    <img src="Lake_Aloha.JPG" alt="Lake Aloha" title="Lake Aloha, California">
-    <img src="Cinque_Torri.JPG" alt="Cinque Torri" title="Cinque Torri, Italy">
-    <img src="Channel_Islands.JPG" alt="Channel Islands" title="Channel Islands, California">
-    <img src="Mt_Whitney.JPG" alt="Mt Whitney" title="Mt. Whitney, California">
-    <img src="Ocean_Beach.JPG" alt="Ocean Beach" title="Ocean Beach, San Francisco">
-    <img src="Santa_Barbara.JPG" alt="Santa Barbara" title="Santa Barbara, California">
-    <img src="Carmel.JPG" alt="Carmel" title="Carmel-by-the-Sea, California">
-    <img src="Lake_Braies.JPG" alt="Lake Braies" title="Lake Braies, Italy">
-    <img src="Big_Sur.JPG" alt="Big Sur" title="Big Sur, California">
-    <img src="Dolomites.JPG" alt="Dolomites" title="Dolomites, Italy">
-    <img src="Eastern_Sierras.JPG" alt="Eastern Sierras" title="Eastern Sierras, California">
-    <img src="Sunset.JPG" alt="Sunset" title="Sunset, San Francisco">
-    <img src="Golden_Gate_Park.JPG" alt="Golden Gate Park" title="Golden Gate Park, San Francisco">
+  <div id="photography" class="content">
+    <h2>Scenes from the Bay Area and Beyond</h2>
+    <div class="photo-gallery">
+      <img src="Lake_Aloha.JPG" alt="Lake Aloha" title="Lake Aloha, California">
+      <img src="Cinque_Torri.JPG" alt="Cinque Torri" title="Cinque Torri, Italy">
+      <img src="Channel_Islands.JPG" alt="Channel Islands" title="Channel Islands, California">
+      <img src="Mt_Whitney.JPG" alt="Mt Whitney" title="Mt. Whitney, California">
+      <img src="Ocean_Beach.JPG" alt="Ocean Beach" title="Ocean Beach, San Francisco">
+      <img src="Santa_Barbara.JPG" alt="Santa Barbara" title="Santa Barbara, California">
+      <img src="Carmel.JPG" alt="Carmel" title="Carmel-by-the-Sea, California">
+      <img src="Lake_Braies.JPG" alt="Lake Braies" title="Lake Braies, Italy">
+      <img src="Big_Sur.JPG" alt="Big Sur" title="Big Sur, California">
+      <img src="Dolomites.JPG" alt="Dolomites" title="Dolomites, Italy">
+      <img src="Eastern_Sierras.JPG" alt="Eastern Sierras" title="Eastern Sierras, California">
+      <img src="Sunset.JPG" alt="Sunset" title="Sunset, San Francisco">
+      <img src="Golden_Gate_Park.JPG" alt="Golden Gate Park" title="Golden Gate Park, San Francisco">
+    </div>
   </div>
-</div>
 
   <script>
     function showTab(tabId) {
@@ -125,6 +137,8 @@
     }
   </script>
 </body>
+</html>
+
 
 
 
