@@ -151,12 +151,14 @@
       document.getElementById(tabId).classList.add('active');
     }
 
+    // Split the text in the about section into individual words and wrap them in span elements
     const aboutText = document.getElementById('about-text');
     const text = aboutText.innerHTML;
 
-    aboutText.innerHTML = `<span class="scatter-text">${text}</span>`; // Wrap text in span to control animation
+    const wordsArray = text.split(' ').map(word => `<span class="scatter-text">${word}</span>`).join(' ');
+    aboutText.innerHTML = wordsArray;
 
-    const words = document.querySelectorAll('.scatter-text span');
+    const words = document.querySelectorAll('.scatter-text');
 
     aboutText.addEventListener('mouseenter', () => {
       words.forEach(word => {
@@ -175,6 +177,7 @@
   </script>
 </body>
 </html>
+
 
 
 
