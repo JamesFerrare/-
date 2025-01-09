@@ -173,11 +173,12 @@
 
     const words = document.querySelectorAll('.scatter-text');
 
+    // Add event listeners to all the spans inside the "about-text" container
     aboutText.addEventListener('mouseenter', () => {
       words.forEach(word => {
         // Set a small scatter range (e.g., between -10px and 10px)
-        const randomX = Math.random() * 20 - 40; // Random X offset between -10px and 10px
-        const randomY = Math.random() * 20 - 40; // Random Y offset between -10px and 10px
+        const randomX = Math.random() * 20 - 10; // Random X offset between -10px and 10px
+        const randomY = Math.random() * 20 - 10; // Random Y offset between -10px and 10px
         word.style.transform = `translate(${randomX}px, ${randomY}px)`; // Apply random movement nearby
       });
     });
