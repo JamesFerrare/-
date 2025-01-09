@@ -18,9 +18,14 @@
       color: white;
       text-decoration: none;
       margin: 0 15px;
+      cursor: pointer;
     }
     .content {
+      display: none;
       margin-top: 20px;
+    }
+    .content.active {
+      display: block;
     }
     .about img {
       width: 200px;
@@ -32,19 +37,19 @@
 </head>
 <body>
   <header>
-    <a href="#about">About</a>
-    <a href="#publications">Publications</a>
-    <a href="#cv">CV</a>
-    <a href="#photography">Photography</a>
+    <a onclick="showTab('about')">About</a>
+    <a onclick="showTab('publications')">Publications</a>
+    <a onclick="showTab('cv')">CV</a>
+    <a onclick="showTab('photography')">Photography</a>
   </header>
 
   <h1>Welcome to My Personal Website</h1>
   <p>This is where you can learn more about me!</p>
 
-  <div id="about" class="content">
+  <div id="about" class="content active">
     <h2>About Me</h2>
-    <img src="IMG_5824 2.JPG" alt="Your Photo" width="450" height="750">
-    <p>Hello! I'm a graduate student in the Biophysics PhD Program at Stanford University. I work in Benjamin Good's lab in the Applied Physics Department, where my research combines tools from statistical physics and evolutionary biology. You can find a list of my publications here. </p>
+    <img src="IMG_5824 2.JPG" alt="Your Photo" width="450" height="600">
+    <p>Hello! I'm a graduate student in the Biophysics PhD Program at Stanford University. I work in Benjamin Good's lab in the Applied Physics Department, where my research combines tools from statistical physics and evolutionary biology. You can find a list of my publications here.</p>
   </div>
 
   <div id="publications" class="content">
@@ -61,5 +66,16 @@
     <h2>Photography</h2>
     <p>Explore some of my photography work.</p>
   </div>
+
+  <script>
+    function showTab(tabId) {
+      // Hide all content sections
+      const contents = document.querySelectorAll('.content');
+      contents.forEach(content => content.classList.remove('active'));
+
+      // Show the selected tab's content
+      document.getElementById(tabId).classList.add('active');
+    }
+  </script>
 </body>
 </html>
