@@ -6,56 +6,6 @@
   <title>James Ferrare</title>
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-  <style>
-    body {
-      text-align: center;
-      font-family: 'Roboto', sans-serif;
-    }
-    header {
-      background-color: #333;
-      padding: 10px;
-    }
-    header a {
-      color: white;
-      text-decoration: none;
-      margin: 0 15px;
-      cursor: pointer;
-      font-weight: bold;
-    }
-    .content {
-      display: none;
-      margin-top: 20px;
-    }
-    .content.active {
-      display: block;
-    }
-    .about-container {
-      display: flex;
-      align-items: center; /* Vertically center the content */
-      justify-content: center; /* Center horizontally */
-      gap: 20px; /* Space between text and image */
-    }
-    .about-container img {
-      width: 300px;
-      height: 450px;
-      object-fit: cover;
-    }
-    .about-container p {
-      max-width: 500px; /* Optional: limit text width */
-      text-align: left; /* Align text to the left */
-      line-height: 1.6; /* Improve readability */
-    }
-    .photo-gallery img {
-      width: 450px;
-      height: 300px;
-      margin: 10px;
-      object-fit: cover;
-    }
-    h2 {
-      font-size: 28px;
-      color: #333;
-    }
-  </style>
 </head>
 <body>
   <header>
@@ -94,25 +44,50 @@
     <p>You can view my CV here.</p>
   </div>
 
-
-<div id="photography" class="content">
-  <h2>Scenes from the Bay Area and Beyond</h2>
-  <div class="photo-gallery">
-    <img src="Lake_Aloha.JPG" alt="Lake Aloha" title="Lake Aloha, California">
-    <img src="Cinque_Torri.JPG" alt="Cinque Torri" title="Cinque Torri, Italy">
-    <img src="Channel_Islands.JPG" alt="Channel Islands" title="Channel Islands, California">
-    <img src="Mt_Whitney.JPG" alt="Mt Whitney" title="Mt. Whitney, California">
-    <img src="Ocean_Beach.JPG" alt="Ocean Beach" title="Ocean Beach, San Francisco">
-    <img src="Santa_Barbara.JPG" alt="Santa Barbara" title="Santa Barbara, California">
-    <img src="Carmel.JPG" alt="Carmel" title="Carmel-by-the-Sea, California">
-    <img src="Lake_Braies.JPG" alt="Lake Braies" title="Lake Braies, Italy">
-    <img src="Big_Sur.JPG" alt="Big Sur" title="Big Sur, California">
-    <img src="Dolomites.JPG" alt="Dolomites" title="Dolomites, Italy">
-    <img src="Eastern_Sierras.JPG" alt="Eastern Sierras" title="Eastern Sierras, California">
-    <img src="Sunset.JPG" alt="Sunset" title="Sunset, San Francisco">
-    <img src="Golden_Gate_Park.JPG" alt="Golden Gate Park" title="Golden Gate Park, San Francisco">
+  <div id="photography" class="content">
+    <h2>Scenes from the Bay Area and Beyond</h2>
+    <div class="photo-gallery">
+      <div title="Lake Aloha, California">
+        <img src="Lake_Aloha.JPG" alt="Lake Aloha">
+      </div>
+      <div title="Cinque Torri, Italy">
+        <img src="Cinque_Torri.JPG" alt="Cinque Torri">
+      </div>
+      <div title="Channel Islands, California">
+        <img src="Channel_Islands.JPG" alt="Channel Islands">
+      </div>
+      <div title="Mt. Whitney, California">
+        <img src="Mt_Whitney.JPG" alt="Mt Whitney">
+      </div>
+      <div title="Ocean Beach, San Francisco">
+        <img src="Ocean_Beach.JPG" alt="Ocean Beach">
+      </div>
+      <div title="Santa Barbara, California">
+        <img src="Santa_Barbara.JPG" alt="Santa Barbara">
+      </div>
+      <div title="Carmel-by-the-Sea, California">
+        <img src="Carmel.JPG" alt="Carmel">
+      </div>
+      <div title="Lake Braies, Italy">
+        <img src="Lake_Braies.JPG" alt="Lake Braies">
+      </div>
+      <div title="Big Sur, California">
+        <img src="Big_Sur.JPG" alt="Big Sur">
+      </div>
+      <div title="Dolomites, Italy">
+        <img src="Dolomites.JPG" alt="Dolomites">
+      </div>
+      <div title="Eastern Sierras, California">
+        <img src="Eastern_Sierras.JPG" alt="Eastern Sierras">
+      </div>
+      <div title="Sunset, San Francisco">
+        <img src="Sunset.JPG" alt="Sunset">
+      </div>
+      <div title="Golden Gate Park, San Francisco">
+        <img src="Golden_Gate_Park.JPG" alt="Golden Gate Park">
+      </div>
+    </div>
   </div>
-</div>
 
   <script>
     function showTab(tabId) {
@@ -126,5 +101,6 @@
   </script>
 </body>
 </html>
+
 
 
