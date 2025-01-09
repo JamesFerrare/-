@@ -94,24 +94,29 @@
     <p>You can view my CV here.</p>
   </div>
 
-  <div id="photography" class="content">
-    <h2>Scenes from the Bay Area and Beyond</h2>
-    <div class="photo-gallery">
-      <img src="Lake_Aloha.JPG" alt="Lake Aloha">
-      <img src="Cinque_Torri.JPG" alt="Cinque Torri">
-      <img src="Channel_Islands.JPG" alt="Channel Islands">
-      <img src="Mt_Whitney.JPG" alt="Mt Whitney">
-      <img src="Ocean_Beach.JPG" alt="Ocean Beach">
-      <img src="Santa_Barbara.JPG" alt="Santa Barbara">
-      <img src="Carmel.JPG" alt="Carmel">
-      <img src="Lake_Braies.JPG" alt="Lake Braies">
-      <img src="Big_Sur.JPG" alt="Big Sur">
-      <img src="Dolomites.JPG" alt="Dolomites">
-      <img src="Eastern_Sierras.JPG" alt="Eastern Sierras">
-      <img src="Sunset.JPG" alt="Sunset">
-      <img src="Golden_Gate_Park.JPG" alt="Golden Gate Park">
-    </div>
+
+Here's the updated HTML where hovering over a photo displays the location as a tooltip. I used the title attribute, which displays a tooltip when you hover over the image:
+
+html
+Copy code
+<div id="photography" class="content">
+  <h2>Scenes from the Bay Area and Beyond</h2>
+  <div class="photo-gallery">
+    <img src="Lake_Aloha.JPG" alt="Lake Aloha" title="Lake Aloha, California">
+    <img src="Cinque_Torri.JPG" alt="Cinque Torri" title="Cinque Torri, Italy">
+    <img src="Channel_Islands.JPG" alt="Channel Islands" title="Channel Islands, California">
+    <img src="Mt_Whitney.JPG" alt="Mt Whitney" title="Mt. Whitney, California">
+    <img src="Ocean_Beach.JPG" alt="Ocean Beach" title="Ocean Beach, San Francisco">
+    <img src="Santa_Barbara.JPG" alt="Santa Barbara" title="Santa Barbara, California">
+    <img src="Carmel.JPG" alt="Carmel" title="Carmel-by-the-Sea, California">
+    <img src="Lake_Braies.JPG" alt="Lake Braies" title="Lake Braies, Italy">
+    <img src="Big_Sur.JPG" alt="Big Sur" title="Big Sur, California">
+    <img src="Dolomites.JPG" alt="Dolomites" title="Dolomites, Italy">
+    <img src="Eastern_Sierras.JPG" alt="Eastern Sierras" title="Eastern Sierras, California">
+    <img src="Sunset.JPG" alt="Sunset" title="Sunset, San Francisco">
+    <img src="Golden_Gate_Park.JPG" alt="Golden Gate Park" title="Golden Gate Park, San Francisco">
   </div>
+</div>
 
   <script>
     function showTab(tabId) {
