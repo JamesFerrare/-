@@ -3,12 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Your Name</title>
+  <title>James Ferrare</title>
   <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <style>
     body {
       text-align: center;
-      font-family: Arial, sans-serif;
+      font-family: 'Roboto', sans-serif;
     }
     header {
       background-color: #333;
@@ -19,6 +20,7 @@
       text-decoration: none;
       margin: 0 15px;
       cursor: pointer;
+      font-weight: bold;
     }
     .content {
       display: none;
@@ -41,12 +43,17 @@
     .about-container p {
       max-width: 500px; /* Optional: limit text width */
       text-align: left; /* Align text to the left */
+      line-height: 1.6; /* Improve readability */
     }
     .photo-gallery img {
       width: 450px;
       height: 300px;
       margin: 10px;
       object-fit: cover;
+    }
+    h2 {
+      font-size: 28px;
+      color: #333;
     }
   </style>
 </head>
@@ -64,11 +71,11 @@
       <p>
         Hello! I'm a graduate student in the Biophysics PhD Program at Stanford University. 
         I work in Benjamin Good's lab in the Applied Physics Department, where my research 
-        combines tools from statistical physics and evolutionary biology. <br>
+        combines tools from statistical physics and evolutionary biology. <br><br>
         My work currently focuses on understanding the role of chunk-like recombination 
         (due to horizontal gene transfer) in large adapting populations. Previously, I've also 
         studied how natural selection on mutations that alter the short-term fitness of an organism,
-        as well as its long-term evolvability. <br>
+        as well as its long-term evolvability. <br><br>
         Prior to Stanford, I studied international development, mathematics, and physics at Tulane
         University in New Orleans.
       </p>
@@ -87,7 +94,7 @@
   </div>
 
   <div id="photography" class="content">
-    <h2>Scenes From The Bay Area and Beyond</h2>
+    <h2>Scenes from the Bay Area and Beyond</h2>
     <div class="photo-gallery">
       <img src="Lake_Aloha.JPG" alt="Lake Aloha">
       <img src="Cinque_Torri.JPG" alt="Cinque Torri">
@@ -117,4 +124,5 @@
   </script>
 </body>
 </html>
+
 
