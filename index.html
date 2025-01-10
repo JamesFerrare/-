@@ -1,86 +1,82 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>James Ferrare</title>
-  <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-  <style>
-    body {
-      text-align: center;
-      font-family: 'Roboto', sans-serif;
-    }
-    header {
-      background-color: #333;
-      padding: 10px;
-    }
-    header a {
-      color: white;
-      text-decoration: none;
-      margin: 0 15px;
-      cursor: pointer;
-      font-weight: bold;
-    }
-    .content {
-      display: none;
-      margin-top: 20px;
-    }
-    .content.active {
-      display: block;
-    }
-    .about-container {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 20px;
-    }
-    .about-container img {
-      width: 300px;
-      height: 450px;
-      object-fit: cover;
-    }
-    .about-container p {
-      max-width: 500px;
-      text-align: left;
-      line-height: 1.6;
-    }
-    .photo-gallery {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-    .photo-gallery img {
-      width: 450px;
-      height: 300px;
-      margin: 10px;
-      object-fit: cover;
-      position: relative;
-      transition: opacity 0.3s ease-in-out;
-    }
-    .photo-gallery img:hover {
-      opacity: 0.4;
-    }
-    .photo-gallery img:hover::after {
-      content: attr(title);
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      color: white;
-      font-size: 32px;
-      font-weight: bold;
-      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
-      z-index: 10;
-      opacity: 1;
-      transition: opacity 0.3s ease-in-out;
-    }
-    h2 {
-      font-size: 28px;
-      color: #333;
-    }
-  </style>
-</head>
+<style>
+  body {
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+  }
+  header {
+    background-color: #333;
+    padding: 10px;
+  }
+  header a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  .content {
+    display: none;
+    margin-top: 20px;
+  }
+  .content.active {
+    display: block;
+  }
+  .about-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+  }
+  .about-container img {
+    width: 300px;
+    height: 450px;
+    object-fit: cover;
+  }
+  .about-container p {
+    max-width: 500px;
+    text-align: left;
+    line-height: 1.6;
+  }
+  .photo-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .photo-gallery img {
+    width: 450px;
+    height: 300px;
+    margin: 10px;
+    object-fit: cover;
+    position: relative;
+    transition: opacity 0.3s ease-in-out;
+  }
+  .photo-gallery img:hover {
+    opacity: 0.4;
+  }
+  .photo-gallery img:hover::after {
+    content: attr(title);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 32px;
+    font-weight: bold;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    z-index: 10;
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+  }
+  h2 {
+    font-size: 36px; /* Increased font size for your name */
+    color: #333;
+    margin-bottom: 20px; /* Add some space below the name */
+  }
+  .about-container p strong {
+    font-weight: bold;
+  }
+</style>
+
 <body>
   <header>
     <a onclick="showTab('about')">About</a>
@@ -92,7 +88,7 @@
     <h2>James Ferrare</h2>
     <div class="about-container">
       <p id="about-text">
-        Hello! I'm a graduate student in the Biophysics PhD Program at Stanford University. 
+        <strong>Hello!</strong> I'm a graduate student in the Biophysics PhD Program at Stanford University. 
         I work in the lab of Dr. <a href="https://bgoodlab.github.io/" target="_blank">Benjamin Good</a>, where my research combines tools from statistical
         physics and theoretical population genetics. <br><br>
         My current work focuses on studying the role of chunk-like recombination in large adapting populations. 
@@ -142,5 +138,4 @@
     }
   </script>
 </body>
-</html>
 
