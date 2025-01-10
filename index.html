@@ -45,10 +45,6 @@
       text-align: left; /* Align text to the left */
       line-height: 1.6; /* Improve readability */
     }
-    .scatter-text {
-      display: inline-block;
-      transition: transform 0.3s ease-in-out;
-    }
     .photo-gallery {
       display: flex;
       flex-wrap: wrap;
@@ -150,47 +146,10 @@
       // Show the selected tab's content
       document.getElementById(tabId).classList.add('active');
     }
-
-    // Function to split and wrap text, preserving HTML tags like <a> and <br>
-    function wrapTextWithSpan(text) {
-      const tempDiv = document.createElement('div');
-      tempDiv.innerHTML = text;
-
-      // Wrap all text nodes in <span> elements, preserving tags like <a> and <br>
-      const walk = document.createTreeWalker(tempDiv, NodeFilter.SHOW_TEXT, null, false);
-      while (walk.nextNode()) {
-        const textNode = walk.currentNode;
-        const span = document.createElement('span');
-        span.classList.add('scatter-text');
-        span.textContent = textNode.textContent;
-        textNode.replaceWith(span);
-      }
-      return tempDiv.innerHTML;
-    }
-
-    const aboutText = document.getElementById('about-text');
-    aboutText.innerHTML = wrapTextWithSpan(aboutText.innerHTML);
-
-    const words = document.querySelectorAll('.scatter-text');
-
-    // Add event listeners to all the spans inside the "about-text" container
-    aboutText.addEventListener('mouseenter', () => {
-      words.forEach(word => {
-        // Set a small scatter range (e.g., between -10px and 10px)
-        const randomX = Math.random() * 20 - 10; // Random X offset between -10px and 10px
-        const randomY = Math.random() * 20 - 10; // Random Y offset between -10px and 10px
-        word.style.transform = `translate(${randomX}px, ${randomY}px)`; // Apply random movement nearby
-      });
-    });
-
-    aboutText.addEventListener('mouseleave', () => {
-      words.forEach(word => {
-        word.style.transform = 'translate(0, 0)'; // Reset position
-      });
-    });
   </script>
 </body>
 </html>
+
 
 
 
