@@ -44,22 +44,23 @@
       line-height: 1.6;
     }
     .photo-gallery {
-      display: flex;
-      flex-wrap: wrap;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive grid */
+      gap: 10px;
       justify-content: center;
+      align-items: center;
     }
     .photo-gallery img {
-      width: 450px;
-      height: 300px;
-      margin: 10px;
+      width: 100%; /* Automatically fill grid cell */
+      height: auto;
       object-fit: cover;
-      position: relative;
-      transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+      transition: transform 0.3s ease-in-out, z-index 0.3s ease-in-out;
     }
     .photo-gallery img:hover {
-      opacity: 0.9;
-      transform: scale(1.2); /* Makes the image expand */
-      z-index: 1; /* Ensures the expanded image appears above others */
+      transform: scale(1.2); /* Expand within the grid */
+      z-index: 1; /* Ensure the expanded image stays above others */
+      grid-column: span 2; /* Span 2 columns for expansion */
+      grid-row: span 2; /* Span 2 rows for expansion */
     }
     h2 {
       font-size: 36px; /* Increased font size for your name */
@@ -140,5 +141,4 @@
   </script>
 </body>
 </html>
-
 
