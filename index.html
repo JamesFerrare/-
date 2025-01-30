@@ -41,21 +41,37 @@
       object-fit: cover;
     }
     .about-container p {
-      max-width: 400px;
+      max-width: 500px;
       text-align: left;
       line-height: 1.6;
     }
-    .cv-container {
-      width: 100%;
-      max-width: 800px;
-      margin: auto;
-      text-align: center;
+    .photo-gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
     }
-    .cv-container iframe {
-      width: 100%;
-      height: 80vh;
-      border: none;
+    .photo-gallery img {
+      width: 450px;
+      height: 300px;
+      margin: 10px;
+      object-fit: cover;
+      position: relative;
+      transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
     }
+    .photo-gallery img:hover {
+      opacity: 0.9;
+      transform: scale(1.1);
+      z-index: 1;
+    }
+    h2 {
+      font-size: 28px;
+      color: #333;
+      margin-bottom: 20px;
+    }
+    .about-container p strong {
+      font-weight: bold;
+    }
+    /* Mobile responsiveness */
     @media (max-width: 600px) {
       .about-container {
         flex-direction: column;
@@ -64,8 +80,14 @@
       .about-container p {
         text-align: center;
       }
-      .cv-container iframe {
-        height: 500px;
+      .photo-gallery img {
+        width: 100%;
+        height: auto;
+        max-width: 400px;
+      }
+      .content embed {
+        width: 100%;
+        height: 400px;
       }
     }
   </style>
@@ -80,27 +102,24 @@
   <div id="about" class="content active">
     <h2>James Ferrare</h2>
     <div class="about-container">
-      <p>
+      <p id="about-text">
         <strong>Hello!</strong> I'm a graduate student in the Biophysics PhD Program at Stanford University. 
         I work in the lab of Dr. <a href="https://bgoodlab.github.io/" target="_blank">Benjamin Good</a>, where my research combines tools from statistical
-        physics and theoretical population genetics.<br><br>
-        My current work focuses on studying the role of recombination in adapting microbial populations.
-        Many microbes can exchange genetic material through a process known as horizontal gene transfer.
-        We are interested in a simple question: at what rates does HGT appreciably affect evolutionary dynamics?
-        Check out our paper <a href="https://www.nature.com/articles/s41559-024-02527-0" target="_blank">here</a>.<br><br>
+        physics and theoretical population genetics. <br><br>
+        My current work focuses on studying the role of recombination in adapting microbial populations. 
+        Many microbes can exchange genetic material through a process known as horizontal gene transfer. 
+        We are interested in a simple question: at what rates does HGT appreciably affect evolutionary dynamicss?
+        Previously, I've also studied how natural selection acts on mutations that alter the short-term fitness of an organism,
+        as well as the rates and benefits of future mutations. You can check out our paper <a href="https://www.nature.com/articles/s41559-024-02527-0" target="_blank">here</a>. <br><br>
         Prior to Stanford, I studied international development, mathematics, and physics at Tulane
-        University. I spent time in Haiti and Paraguay researching chronic disease and energy poverty. 
-        Outside of science, I love to backpack and explore the Bay Area.<br><br> 
-        <strong>Email</strong>: jferrare at stanford.edu | <strong>Bluesky</strong>: jferrare@bsky.social
+        University in New Orleans. I spent time in Haiti and Paraguay researching chronic disease and energy poverty and am always looking for projects related to development. Outside of science, I love to backpack and explore the Bay Area. <br><br> <strong>Email</strong>: jferrare at stanford.edu | <strong>Bluesky</strong>: jferrare@bsky.social
       </p>
       <img src="About_Me.png" alt="Your Photo">
     </div>
   </div>
 
   <div id="cv" class="content">
-    <div class="cv-container">
-      <iframe src="Resume.pdf"></iframe>
-    </div>
+    <embed src="Resume.pdf" width="80%" height="900px" type="application/pdf">
   </div>
 
   <div id="photography" class="content">
@@ -114,27 +133,4 @@
       <img src="Santa_Barbara.JPG" alt="Santa Barbara">
       <img src="Carmel.JPG" alt="Carmel-by-the-Sea">
       <img src="Lake_Braies.JPG" alt="Lake Braies">
-      <img src="Big_Sur.JPG" alt="Big Sur">
-      <img src="Dolomites.JPG" alt="Dolomites">
-      <img src="Eastern_Sierras.JPG" alt="Eastern Sierras">
-      <img src="Sunset.JPG" alt="Sunset">
-      <img src="Golden_Gate_Park.JPG" alt="Golden Gate Park">
-      <img src="Marin.jpg" alt="Marin">
-      <img src="Ocean_beach2.jpg" alt="Ocean Beach 2">
-      <img src="Okinawa.jpg" alt="Okinawa">
-      <img src="Lake_Tahoe.jpg" alt="Lake Tahoe">
-      <img src="Yosemite.jpg" alt="Yosemite Valley">
-      <img src="Geirangerfjord.jpg" alt="Geirangerfjord">
-      <img src="Toubkal.jpg" alt="Mt. Toubkal">
-    </div>
-  </div>
-
-  <script>
-    function showTab(tabId) {
-      const contents = document.querySelectorAll('.content');
-      contents.forEach(content => content.classList.remove('active'));
-      document.getElementById(tabId).classList.add('active');
-    }
-  </script>
-</body>
-</html>
+      <img src
