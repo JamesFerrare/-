@@ -45,6 +45,11 @@
       text-align: left;
       line-height: 1.6;
     }
+    h2 {
+      font-size: 28px;
+      color: #333;
+      margin-bottom: 20px;
+    }
     .photo-gallery {
       display: flex;
       flex-wrap: wrap;
@@ -63,40 +68,14 @@
       transform: scale(1.1);
       z-index: 1;
     }
-    h2 {
-      font-size: 28px;
-      color: #333;
-      margin-bottom: 20px;
-    }
-    .about-container p strong {
-      font-weight: bold;
-    }
-    /* Mobile responsiveness */
-    @media (max-width: 600px) {
-      .about-container {
-        flex-direction: column;
-        text-align: center;
-      }
-      .about-container p {
-        text-align: center;
-      }
-      .photo-gallery img {
-        width: 100%;
-        height: auto;
-        max-width: 400px;
-      }
-      .content embed {
-        width: 100%;
-        height: 400px;
-      }
-    }
   </style>
 </head>
 <body>
   <header>
     <a onclick="showTab('about')">About</a>
-    <a onclick="showTab('cv')">CV</a>
+    <a href="Resume.pdf" target="_blank">CV</a>
     <a onclick="showTab('photography')">Photography</a>
+    <a onclick="showTab('publications')">Publications</a>
   </header>
 
   <div id="about" class="content active">
@@ -116,10 +95,6 @@
       </p>
       <img src="About_Me.png" alt="Your Photo">
     </div>
-  </div>
-
-  <div id="cv" class="content">
-    <embed src="Resume.pdf" width="80%" height="900px" type="application/pdf">
   </div>
 
   <div id="photography" class="content">
@@ -147,14 +122,7 @@
       <img src="Toubkal.jpg" alt="Mt. Toubkal">
     </div>
   </div>
-
-  <script>
-    function showTab(tabId) {
-      const contents = document.querySelectorAll('.content');
-      contents.forEach(content => content.classList.remove('active'));
-      document.getElementById(tabId).classList.add('active');
-    }
-  </script>
 </body>
 </html>
+
 
