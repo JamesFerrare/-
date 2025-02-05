@@ -122,7 +122,21 @@
       <img src="Toubkal.jpg" alt="Mt. Toubkal">
     </div>
   </div>
+
+  <div id="publications" class="content">
+    <h2>Publications</h2>
+    <p><strong>Publication 1:</strong> <a href="#">Main Text</a> | <a href="#">Supplementary Material</a></p>
+    <p><strong>Publication 2:</strong> <a href="#">Main Text</a> | <a href="#">Supplementary Material</a></p>
+    <p><strong>Publication 3:</strong> <a href="#">Main Text</a> | <a href="#">Supplementary Material</a></p>
+  </div>
+
+  <script>
+    function showTab(tabId) {
+      const contents = document.querySelectorAll('.content');
+      contents.forEach(content => content.classList.remove('active'));
+      document.getElementById(tabId).classList.add('active');
+    }
+  </script>
 </body>
 </html>
-
 
